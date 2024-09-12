@@ -111,6 +111,50 @@ main{
     color:#FF900E ;
 }
 
+
+/* features style */
+.features{
+    margin-top: 140px;
+    display: flex;
+    gap: 140px;
+}
+.feature-content .card{
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06); 
+    padding: 30px;
+    margin-bottom: 20px;
+}
+.features .section-title{
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+
+.ten-years-badge{
+    border-radius: 8px;
+    background: #FF900E;
+    color: #FFF;
+    width: 300px;
+    padding: 46px 42px;
+    text-align: center;
+    position: relative;
+    bottom: 110px;
+    right: 90px;
+}
+.ten-years-badge p{
+    color: #FFF;
+    font-size: 25px;
+    font-weight: 500;
+
+}
+.ten-years-badge h2{
+    font-size: 65px;
+    margin: 0;
+    margin-bottom: 0;
+}
+
+
+
 /* facts section */
 .facts-info{
     width: 40%;
@@ -142,6 +186,9 @@ main{
     font-weight: 600;
     margin-top: 1px;
 }
+
+
+
 /* sponsors styles */
 .sponsors{
     text-align: center;
@@ -158,6 +205,19 @@ main{
 
 }
 
+/* footer style */
+footer{
+    text-align: center;
+    border-radius: 8px;
+    background: #FFF4E7;
+    margin: 60px 210px;
+}
+.footer-info{
+    padding: 38px 410px;
+    color:  #424242;
+    font-size: 20px;
+    font-weight: 400;
+}
 /* responsive media queries */
 /* mobile device */
 @media screen and (max-width:576px) {
@@ -165,8 +225,16 @@ main{
         padding: 20px;
     }
     nav,
-    .team-container{
+    .team-container,
+    .features{
         flex-direction: column;
+    }
+    .feature-img img{
+        width: 100%;
+    }
+    .ten-years-badge{
+        position: static;
+        max-width: 265px;
     }
     .teams-img-container{
         grid-template-columns: 1fr;
@@ -190,7 +258,6 @@ main{
     align-items: center;
   }
 
-}
 
 /* tablet or medium device */
 
@@ -199,9 +266,13 @@ main{
         padding:50px ;
     }
     nav,
-    .team-container{
+    .team-container,
+    .features{
         flex-direction: column;
     }
+    .ten-years-badge{
+        position: static;
+        max-width: 265px;
     .teams-title{
         width: 80%;
     }
@@ -212,4 +283,4 @@ main{
         flex-direction: column;
         align-items: center;
       }  
-}
+} 
