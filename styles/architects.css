@@ -11,7 +11,24 @@ header{
     padding: 50px 240px;
 
 }
-.header-title{
+
+/* common shared css */
+.btn-primary{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600; 
+    background-color: #ff900e;
+    border: 0px;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+}
+.text-light-gray{
+    color: #727272;
+    font-size: 16px;
+    font-weight: 400;
+}
+.section-title{
     color: #131313;
     font-size: 45px;
     font-weight: 700px;
@@ -52,22 +69,6 @@ li a{
     font-size: 64px;
     font-weight: 700;
     margin-bottom: 10px;
-}
-.text-light-gray{
-    color: #727272;
-    font-size: 16px;
-    font-weight: 400;
-}
-.btn-primary{
-  color: #fff;
-  font-size: 20px;
-  font-weight: 600; 
-  background-color: #ff900e;
-  border: 0px;
-  border-radius: 8px;
-  padding: 20px 24px;
-  margin-bottom: 20px;
-
 }
 .banner img{
     width: 100%;
@@ -110,6 +111,53 @@ main{
     color:#FF900E ;
 }
 
+/* facts section */
+.facts-info{
+    width: 40%;
+    margin-top: 1px;
+}
+.facts-title{
+    margin-bottom: 5px;
+}
+.facts-card-container{
+    display: flex;
+    justify-content: space-around;
+}
+.facts-card-container .card{
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    text-align: center;
+    padding: 30px 25px;
+}
+.facts-card-container .card-stats{
+    color:#424242;
+    font-size: 45px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 1px;
+}
+.facts-card-container .card-title{
+    color: #727272;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 1px;
+}
+/* sponsors styles */
+.sponsors{
+    text-align: center;
+}
+.sponsors-img-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+
+}
+.sponsors-img-container img{
+    width: 165px;
+
+}
+
 /* responsive media queries */
 /* mobile device */
 @media screen and (max-width:576px) {
@@ -130,6 +178,18 @@ main{
     padding-right: 20px;
     padding-left: 20px;
    }
+  .facts-card-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  } 
+  .facts-info{
+    width: 100%;
+  }
+  .sponsors-img-container{
+    flex-direction: column;
+    align-items: center;
+  }
+
 }
 
 /* tablet or medium device */
@@ -145,5 +205,11 @@ main{
     .teams-title{
         width: 80%;
     }
-    
+    .facts-info{
+        width: 100%;
+    } 
+    .sponsors-img-container{
+        flex-direction: column;
+        align-items: center;
+      }  
 }
